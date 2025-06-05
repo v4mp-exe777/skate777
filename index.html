@@ -1,0 +1,77 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.classList.remove("show");
+    menuToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("show");
+    });
+  });
+</script>
+
+<div class="menu-toggle">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<div class="sidebar">
+  <div>
+    <div class="logo">
+      <img src="https://cdn.weweb.io/designs/913bbb64-642e-4ab4-b0cc-02f3b53dedfb/sections/Design_sem_nome__1_.png?_wwcv=1748821676245" alt="Jobzerr Logo">
+    </div>
+    <a class="nav-link" href="/perfil">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2c-3.3 0-9.8 1.7-9.8 5.1v2.7h19.5v-2.7c0-3.4-6.5-5.1-9.7-5.1z"/></svg>
+      Perfil
+    </a>
+    <a class="nav-link" href="/configuracoes">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.14,12.94a7.13,7.13,0,0,0,.05-1,7.13,7.13,0,0,0-.05-1l2.11-1.65a.49.49,0,0,0,.11-.62l-2-3.46a.5.5,0,0,0-.6-.22l-2.49,1a6.93,6.93,0,0,0-1.73-1l-.38-2.65A.5.5,0,0,0,14.5,3H9.5a.5.5,0,0,0-.5.42L8.62,6.07a6.93,6.93,0,0,0-1.73,1l-2.49-1a.5.5,0,0,0-.6.22l-2,3.46a.49.49,0,0,0,.11.62L4.86,10.94a7.13,7.13,0,0,0,0,2l-2.11,1.65a.49.49,0,0,0-.11.62l2,3.46a.5.5,0,0,0,.6.22l2.49-1a6.93,6.93,0,0,0,1.73,1l.38,2.65a.5.5,0,0,0,.5.42h5a.5.5,0,0,0,.5-.42l.38-2.65a6.93,6.93,0,0,0,1.73-1l2.49,1a.5.5,0,0,0,.6-.22l2-3.46a.49.49,0,0,0-.11-.62ZM12,15.5A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+      Configurações
+    </a>
+    <a class="nav-link" href="/suporte">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12v1a1 1 0 0 0 1 1h1v-2H4a8 8 0 1 1 16 0h-1v2h1a1 1 0 0 0 1-1v-1A10 10 0 0 0 12 2zm0 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm1-5h-2V9h2z"/></svg>
+      Suporte
+    </a>
+  </div>
+  <div>
+    <div class="instagram-card">
+      <a href="https://www.instagram.com/jobzerr" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4Zm8.75 1.5a1 1 0 1 1-1 1a1 1 0 0 1 1-1ZM12 7a5 5 0 1 1-5 5a5 5 0 0 1 5-5Zm0 2a3 3 0 1 0 3 3a3 3 0 0 0-3-3Z"/>
+        </svg>
+        @jobzerr
+      </a>
+    </div>
+    <button class="logout">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" viewBox="0 0 24 24">
+        <path d="M16 13v-2H7V8l-5 4 5 4v-3z"/>
+      </svg>
+      Sair
+    </button>
+  </div>
+</div>
+
+<div class="with-sidebar">
+  <h1 class="glow-text">Olá, <span style="color:#00FFA6">[nome do usuário]</span></h1>
+  <div class="dashboard-grid">
+    <div class="card"><h2>Plano atual</h2><p>PRO</p></div>
+    <div class="card"><h2>Candidaturas enviadas</h2><p>74</p></div>
+    <div class="card"><h2>Último envio</h2><p>03/06/2025</p></div>
+    <div class="card"><h2>Status</h2><div class="limit-warning">Limite diário atingido</div></div>
+    <div class="card" style="grid-column: span 2">
+      <h2>Envio automático</h2>
+      <button class="btn-primary">➤ ENVIAR CURRÍCULO</button>
+    </div>
+    <div class="upgrade-card" style="grid-column: span 2">
+      <h3>⚡ Precisa de mais envios?</h3>
+      <p style="margin: 10px 0;">Desbloqueie até <strong>250 candidaturas/mês</strong> com o plano <strong>TURBO</strong>.</p>
+      <button class="btn-primary">ATUALIZAR PLANO</button>
+    </div>
+  </div>
+  <div class="progress-card">
+    <div><strong>Progresso do plano (74 de 100 envios)</strong></div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width: 74%;"></div>
+    </div>
+  </div>
+</div>
