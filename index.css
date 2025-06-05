@@ -6,7 +6,6 @@
   }
 
   html, body {
-    height: 100%;
     background: #0b0b1a;
     color: white;
     font-family: 'Segoe UI', sans-serif;
@@ -14,6 +13,12 @@
     opacity: 0;
     animation: fadeInBody 0.8s ease-in-out forwards;
   }
+  @media (min-width: 769px) {
+    html, body {
+      min-height: 100%;
+    }
+  }
+
 
   @keyframes fadeInBody {
     0% { opacity: 0; transform: translateY(10px); }

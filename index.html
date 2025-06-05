@@ -7,30 +7,30 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const sidebar = document.querySelector(".sidebar");
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.querySelector('.sidebar');
+    const menuToggle = document.querySelector('.menu-toggle');
 
-        const isMobile = window.innerWidth <= 768;
+    const updateSidebarHeight = () => {
+      if (window.innerWidth > 768) {
+        const fullPage = Math.max(document.documentElement.scrollHeight, window.innerHeight);
+        sidebar.style.height = fullPage + 'px';
+      } else {
+        sidebar.style.height = 'auto';
+      }
+    };
 
-        // Garante que a sidebar comece escondida no mobile
-        if (isMobile) {
-          sidebar.style.height = document.body.scrollHeight + 'px';
-        }
+    updateSidebarHeight();
+    window.addEventListener('scroll', updateSidebarHeight);
+    window.addEventListener('resize', updateSidebarHeight);
 
-        sidebar.classList.remove("show");
-
-        menuToggle.addEventListener("click", () => {
-          sidebar.classList.toggle("show");
-
-          // Recalcula a altura toda vez que abrir no mobile
-          if (window.innerWidth <= 768) {
-            sidebar.style.height = document.body.scrollHeight + 'px';
-          }
-        });
-      });
-    </script>
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('show');
+      updateSidebarHeight();
+    });
+  });
+</script>
 
     <div class="menu-toggle">
       <div></div>
